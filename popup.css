@@ -1,0 +1,50 @@
+body {
+	width: 300px;
+	padding: 10px;
+	font-family: Arial, sans-serif;
+}
+
+#channelList {
+	max-height: 200px; /* Set the maximum height for the channel list with a scroll bar */
+	overflow-y: auto; /* Add a vertical scroll bar when content overflows */
+	border: 1px solid #ccc;
+	padding: 10px;
+	margin-bottom: 10px;
+}
+
+ul {
+	list-style: none;
+	padding: 0;
+	margin: 0; /* Remove default margin */
+}
+
+li {
+	margin-bottom: 5px;
+}
+
+button {
+	background-color: #ff0000;
+	color: #fff;
+	border: none;
+	padding: 5px 10px;
+	cursor: pointer;
+	margin-left: 10px;
+}
+
+input[type="text"] {
+	width: 70%; /* Adjust the input width as needed */
+	padding: 5px;
+	margin-right: 5px; /* Add some spacing between input and buttons */
+}
+
+#channelInputContainer {
+	margin-bottom: 10px; /* Add spacing between input elements and the channel list */
+}
+
+#file-form {
+	margin-top: 20px;
+}
+
+h2 {
+	margin-bottom: 10px;
+}

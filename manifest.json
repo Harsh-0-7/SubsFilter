@@ -1,0 +1,23 @@
+{
+	"manifest_version": 3,
+	"name": "SubsFilter",
+	"description": "An extension that filters YouTube recommendations based on your subscriptions",
+	"version": "0.1.0",
+	"action": {
+		"default_icon": "img/icon_64.png",
+		"default_title": "Unrecommender",
+		"default_popup": "popup.html"
+	},
+	"host_permissions": ["*://*.youtube.com/*"],
+	"content_scripts": [
+		{
+			"matches": ["*://*.youtube.com/*"],
+			"js": ["js/jquery.min.js", "js/main.js"],
+			"run_at": "document_start"
+		}
+	],
+	"permissions": ["storage", "activeTab"],
+	"icons": {
+		"64": "img/icon_64.png"
+	}
+}
