@@ -1,23 +1,27 @@
-document.getElementById("fileInput").addEventListener("change", () => {
+document.addEventListener("DOMContentLoaded", function () {
 	const fileInput = document.getElementById("fileInput");
-	const file = fileInput.files[0];
 
-	if (file) {
-		const reader = new FileReader();
-		reader.onload = (event) => {
-			const fileContent = event.target.result;
-			const channelNames = fileContent.split("\n");
-			for (let i = 0; i < channelNames.length; i++) {
-				channelNames[i] = channelNames[i].trim();
-			}
+	fileInput.addEventListener("change", (e) => {
+		e.preventDefault();
+		const fileInput = document.getElementById("fileInput");
+		const file = fileInput.files[0];
 
-			// Update the channel list in the popup
-			updateChannelList(channelNames);
-		};
-		reader.readAsText(file);
-	}
+		if (file) {
+			const reader = new FileReader();
+			reader.onload = (event) => {
+				const fileContent = event.target.result;
+				const channelNames = fileContent.split("\n");
+				for (let i = 0; i < channelNames.length; i++) {
+					channelNames[i] = channelNames[i].trim();
+				}
+
+				// Update the channel list in the popup
+				updateChannelList(channelNames);
+			};
+			reader.readAsText(file);
+		}
+	});
 });
-
 // Function to update the channel list in the popup
 function updateChannelList(channelArray) {
 	// Clear the channel list first

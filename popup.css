@@ -3,48 +3,66 @@ body {
 	padding: 10px;
 	font-family: Arial, sans-serif;
 }
+#file-form {
+	margin-bottom: 20px;
+}
 
+label {
+	margin-bottom: 10px;
+	font-size: 22px;
+	font-weight: 500;
+}
+
+.hiddenFileInput {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+
+	width: 78px;
+	height: 22px;
+	display: inline-block;
+	overflow: hidden;
+	cursor: pointer;
+}
+
+.hiddenFileInput > input {
+	cursor: pointer;
+}
 #channelList {
-	max-height: 200px; /* Set the maximum height for the channel list with a scroll bar */
-	overflow-y: auto; /* Add a vertical scroll bar when content overflows */
+	max-height: 200px;
+	overflow-y: auto;
 	border: 1px solid #ccc;
 	padding: 10px;
-	margin-bottom: 10px;
+	margin: 10px 0px;
 }
-
-ul {
-	list-style: none;
-	padding: 0;
-	margin: 0; /* Remove default margin */
-}
-
 li {
+	display: flex;
+	justify-content: space-between;
+	list-style-type: none;
+	padding: 0;
+
 	margin-bottom: 5px;
 }
 
 button {
+	border-radius: 3px;
 	background-color: #ff0000;
 	color: #fff;
+	font-weight: 600;
 	border: none;
-	padding: 5px 10px;
 	cursor: pointer;
-	margin-left: 10px;
 }
-
+.actionBox {
+	display: flex;
+	justify-content: space-between;
+}
 input[type="text"] {
 	width: 70%; /* Adjust the input width as needed */
 	padding: 5px;
 	margin-right: 5px; /* Add some spacing between input and buttons */
 }
 
-#channelInputContainer {
-	margin-bottom: 10px; /* Add spacing between input elements and the channel list */
-}
-
-#file-form {
-	margin-top: 20px;
-}
-
-h2 {
-	margin-bottom: 10px;
+#deleteAll {
+	font-size: 12px;
+	font-weight: 700;
 }

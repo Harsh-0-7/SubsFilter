@@ -19,20 +19,24 @@
 		<title>Document</title>
 	</head>
 	<body>
-		<input
-			type="text"
-			id="addChannelName"
-			placeholder="Enter Channel Name"
-		/>
-		<button id="deleteAll">Delete All</button>
-		<div id="channelList"></div>
 		<form id="file-form">
-			<h2>Upload channel names</h2>
-			<input
-				type="file"
-				id="fileInput"
-			/>
+			<label for="fileInput">Upload channel names</label>
+			<span class="hiddenFileInput">
+				<input
+					type="file"
+					id="fileInput"
+			/></span>
 		</form>
+
+		<div class="actionBox">
+			<input
+				type="text"
+				id="addChannelName"
+				placeholder="Add Channel Name"
+			/>
+			<button id="deleteAll">Delete All</button>
+		</div>
+		<div id="channelList"></div>
 		<script src="popup.js"></script>
 	</body>
 </html>
